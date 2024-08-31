@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arbux</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.cdnfonts.com/css/do-futuristic" rel="stylesheet">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+</head>
+<body style="background-color: #e8eded;">
+
+	<div style="background-color:rgba(199, 240, 242, 0.75); box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);" class="floatingdiv"></div>
+		<div class="header-left" style="text-align:left;"><img src="/static/img/arbuxtext.png" width="18%" height="95%" style="margin-top: 5px; margin-right: 0px;"></div>
+		<div class="header-right" style="text-align:right;"><h4 id="emailh" style="display: inline-block; text-align: right;">{{email}}</h4>
+	</div>
+
+	<div class="spacer">&nbsp;</div>
+
+
+
+
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+.header-left {
+    position: fixed;
+    text-align: left;
+    width: 95%;
+}
+.header-right {
+    position: fixed;
+    text-align: right;
+    width: 95%;
+}
+.header-left, .header-right {
+    display: inline-block;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+  .content0 {
+    background-color: #ffffff;
+    width: 90%;
+    height: 1000px;
+    font-weight: lighter;
+    padding: 10px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1, h4 { font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif; font-weight: lighter;} 
+  h1 { font-family: 'DO Futuristic', sans-serif;}
+  p { font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif; font-weight: lighter;}
+  
+.floatingdiv
+{
+    position: fixed;
+    width: 100%;
+    height: 7%;
+    font-weight: lighter; 
+    padding: 2px;
+    padding-left: 10px;
+    margin: 0;
+    border-bottom: 1px solid #c7c7c7;
+}
+.spacer
+{
+    width: 100%;
+    height: 75px;
+}
+
+    .button-16 {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+
+.button-16:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+}
+
+.button-16:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+.button-39 {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(209,213,219);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+
+.button-38 {
+  background-color: #FFFFFF;
+  border: 0;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  padding: .75rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-38:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-38:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-38:focus-visible {
+  box-shadow: none;
+}
+
+.ui-widget {
+    font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+    font-weight: lighter;
+}
+
+.successdialog .ui-dialog-titlebar { 
+    background-color: #00ff6a;
+    color: #ffffff;
+}
+.faildialog .ui-dialog-titlebar {
+    background-color: #ff0037;
+    color: #ffffff;
+}
+</style>
+
+</body>
+</html>
