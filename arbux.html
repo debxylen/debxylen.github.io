@@ -12,20 +12,13 @@
 <body style="background-color: #e8eded;">
 
 	<div style="background-color:rgba(199, 240, 242, 0.75); box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);" class="floatingdiv"></div>
-		<div class="header-left" style="text-align:left;"><img src="/static/img/arbuxtext.png" width="18%" height="95%" style="margin-top: 5px; margin-right: 0px;"></div>
-		<div class="header-right" style="text-align:right;"><h4 id="emailh" style="display: inline-block; text-align: right;">{{email}}</h4>
+		<div class="header-left" style="text-align:left;"><img src="arbuxtext.png" width="18%" height="95%" style="margin-top: 5px; margin-right: 0px;"></div>
+		<div class="header-right" style="text-align:right;"><h4 id="emailh" style="display: inline-block; text-align: right;"></h4>
 	</div>
 
 	<div class="spacer">&nbsp;</div>
 
 	<div class="content0">
-		<div class="control-buttons">
-		<button id="miningbutton" class="button-39" style="background-color: lightgrey;">Start Mining</button>
-		</div><hr>
-		<div class="miner-info">
-		<div style="display: flex; margin-top: auto;"><p>Hashrate:  </p><p id="hashrate">0.00 h/s</p><button id="check-hr" onClick="showhr()"class="button-38" role="button">Refresh Hashrate</button></div>
-		<div style="display: flex; margin-top: auto;"><p>UUID:  </p><input style="display: none;" id="uuid"></p><button id="get-uuid" onClick="copyuuid()" class="button-38">Copy unique ID</button></div>
-		</div>
 	</div>
 
 	<div class="dialogs" style="display: none;">
@@ -33,41 +26,7 @@
 		<div id="faileddialog" title="Operation Failed." style="background-color: #e8eded;"><p id="failedtext">There was an error.</p></div>
 	</div>
 
-    <script>
-        $('#miningbutton').click(function() {
-            if (document.getElementById("miningbutton").innerHTML === "Start Mining") {
-                $.post('/start_mining', function(data) {}).fail(function(xhr, status, error) { $("#faileddialog").dialog({dialogClass: 'faildialog'}); $("#failedtext").html(xhr.responseText) });
-                document.getElementById("miningbutton").innerHTML = "Stop Mining";
-		document.getElementById("miningbutton").style.backgroundColor = "red";
-		document.getElementById("miningbutton").style.color = "white";
-            } else {
-                $.post('/stop_mining', function(data) {}).fail(function() { $("#faileddialog").dialog({dialogClass: 'faildialog'}); });
-                document.getElementById("miningbutton").innerHTML = "Start Mining";
-		document.getElementById("miningbutton").style.backgroundColor = "lightgrey";
-		document.getElementById("miningbutton").style.color = "black";
-            }
-            
-        });
-        function showhr() {
-            $.post('/hashrate', function(data) {
-                document.getElementById("hashrate").innerHTML = data.status;
-            }).fail(function() {
-                $("#faileddialog").dialog({dialogClass: 'faildialog'});
-            });
-        }
-        function copyuuid() {
-            $.post('/get_uuid', function(data) {
-		document.getElementById("uuid").value = data.status;
-		var copyText = document.getElementById("uuid");
-		copyText.select();
-		copyText.setSelectionRange(0, 99999); // For mobile devices
-		navigator.clipboard.writeText(copyText.value);
-		$("#copieddialog").dialog({dialogClass: 'successdialog', open: function(event, ui){setTimeout("$('#copieddialog').dialog('close')",2000);}});
-            }).fail(function() {
-		$("#faileddialog").dialog({dialogClass: 'faildialog'});
-            });
-        }
-    </script>
+   
 
 <style>
 ::-webkit-scrollbar {
