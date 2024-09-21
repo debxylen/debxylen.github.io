@@ -1,0 +1,216 @@
+body {
+    font-family: Arial, sans-serif;
+}
+html { 
+    height:100%; 
+}
+body,html {
+  margin:0;
+  padding:0;
+}
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+.sidebar {
+    width: 250px;
+    position: fixed;
+    float: left;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 20px;
+    height: 112%;
+    z-index: 3;
+}
+
+
+.main-content, .popular-posts, .repackList {
+    margin-left: 300px;
+    padding: 20px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: none;
+}
+body, p, a { 
+font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+font-size: .875rem;
+font-weight: light;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+input[type="email"] {
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+.main-content img {
+  object-fit: contain;
+  width: 50%;
+  left: 30%;
+} 
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    margin-top: 0px;
+    position: sticky; 
+    z-index: 1;
+    top: 0; 
+}
+
+.header-content p {
+    margin: 0;
+    font-size: 36px;
+}
+
+.header-content {
+    flex: top;
+}
+
+.button-39 {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(209,213,219);
+  border-radius: .5rem;
+  box-sizing: border-box;
+  font-family: ui-sans-serif,system-ui,"Segoe UI",Roboto,"Noto Sans",sans-serif;
+  font-weight: 600;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-decoration: none #D1D5DB solid;
+  text-decoration-thickness: auto;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-39:hover {
+  background-color: rgb(249,250,251);
+}
+
+.button-39:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+.button-39:focus-visible {
+  box-shadow: none;
+}
+.posts {
+  background-color: #e6e6e6;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+
+
+.sidebar a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Dark color for text */
+    font-size: 18px;
+    display: block; /* Makes the entire area clickable */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effects */
+.sidebar a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Optional: Add icons (FontAwesome or similar can be used) */
+.sidebar a::before {
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Icon color */
+    transition: color 0.3s ease; /* Smooth transition for icon */
+}
+
+/* Style the sidebar list */
+.sidebar ul {
+    list-style-type: none; /* Remove default bullets */
+    padding: 0;
+    margin: 20px 0; /* Add some space at the top */
+}
+
+.sidebar ul li {
+    margin-bottom: 15px; /* Spacing between items */
+}
+
+.sidebar ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #fff; /* Dark color for text */
+    font-size: 18px;
+    display: block; /* Makes the entire area clickable */
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Hover effects */
+.sidebar ul li a:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Optional: Add icons (FontAwesome or similar can be used) */
+.sidebar ul li a::before {
+    content: '→'; /* You can use an icon font or custom symbol here */
+    margin-right: 10px; /* Space between icon and text */
+    color: #007bff; /* Icon color */
+    transition: color 0.3s ease; /* Smooth transition for icon */
+}
+
+.sidebar ul li a:hover::before {
+    color: white; /* Change icon color on hover */
+}

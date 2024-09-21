@@ -15,7 +15,7 @@
 <body>
     <header>
     <div class="header-content" style="text-align: center">
-        <p style="font-size: 36px;">Kishiren Repacks<p>
+        <p style="font-size: 36px">Kishiren Repacks</p>
         <nav>
             <ul>
             </ul>
@@ -23,7 +23,7 @@
     </div>
     </header>
 
-    <div class="sidebar" style="position: absolute; height: 100%">
+    <div class="sidebar" style="position: absolute; height: 115 %">
         <a href="index.html"><p style="font-size: 30px">Kishiren Repacks</p></a>
         <ul>
             <li><a href="all.html">All Repacks</a></li>
@@ -38,25 +38,43 @@
         </div>
     </div>
     <div class="main-content">
-        <img src="kishirent.png"><br><br>
-        <input type="text" id="searchInput" placeholder="Search for repacks or posts..." style="font-size: 20px; width: 90%;"><button onclick="searchRepack()" style="font-size: 20px; width: 8%;" class="button-39"><i class="fa fa-search"></i></button>
+        <h1 style="font-size: 40px">All Repacks</h1>
     </div>
-    <div class="popular-posts" style="display: none;">
-        <h2>Best Repacks</h2>
-        <ul>
-            <li><a href="assettocorsa.html">Assetto Corsa 1.16.4 + CSP 0.2.4-preview1</a></li>
-            <li><a href="#"></a></li>
-        </ul>
+    <div class="popular-posts">
+    <input type="text" id="searchInput" placeholder="Search for repacks" style="font-size: 20px; width: 90%;"><button onclick="searchRepack()" style="font-size: 20px; width: 8%;" class="button-39"><i class="fa fa-search"></i></button>
     </div>
-    <!-- List of posts -->
-    <div class="repackList" style="background-color: #e6e6e6;">
-        <div class="post"><a href="assettocorsa.html">Assetto Corsa 1.16.4 + CSP 0.2.4-preview1</a></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
+    <div class="repackList" style="">
+        <div class="posts"><a href="assettocorsa.html">Assetto Corsa 1.16.4 + CSP 0.2.4-preview1</a></div>
+        <div class="posts"><a href="#">Need For Speed Heat</a></div>
+        <div class="posts"></div>
+        <div class="posts"></div>
     </div>
+    <script>
+    function searchRepack() {
+    // Get the search input value
+    const input = document.getElementById('searchInput').value.toLowerCase();
 
+    // Get all posts
+    const posts = document.querySelectorAll('.posts');
 
-    <script src="script.js"></script>
+    // Loop through each post
+    posts.forEach(post => {
+        // If the post contains the search term, display it; otherwise, hide it
+        if (post.textContent.toLowerCase().includes(input)) {
+            post.style.display = 'block';
+        } else {
+            post.style.display = 'none';
+        }
+    });
+    }
+
+    // Event listener for "Enter" key
+    document.getElementById('searchInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        searchRepack();
+    }
+    });
+
+    </script>
 </body>
 </html>
