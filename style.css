@@ -74,7 +74,8 @@ main {
     background-color: #24292e;
     border: 1px solid #e1e4e8;
     border-radius: 6px;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transition: border-color 0.3s, box-shadow 0.3s, height 0.5s ease;
+    overflow: hidden; /* Prevent overflow during transition */
 }
 
 .update-post {
@@ -193,4 +194,81 @@ footer p {
 }
 .updates-section::-webkit-scrollbar { 
     display: none;  /* Safari and Chrome */
+}
+
+
+
+
+
+
+
+
+/* ANIMATIONS */
+
+/* Define keyframes for float-up */
+@keyframes floatUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px); /* Start below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Final position */
+    }
+}
+
+/* Float-up for all sections */
+.sidebar-left, #posts, .sidebar-right {
+    opacity: 0; /* Start hidden */
+    animation: floatUp 0.5s ease-out forwards;
+}
+
+/* Animation delays to stagger appearance */
+#posts {
+    animation-delay: 0.1s;
+}
+.sidebar-left {
+    animation-delay: 0.3s;
+}
+.sidebar-right {
+    animation-delay: 0.45s;
+}
+
+/* Define keyframes for float-up */
+@keyframes floatDown {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}
+
+.falldown {
+    animation: floatDown 0.5s ease-out forwards;
+}
+
+
+
+.hidden {
+    max-height: 0;
+    visibility: hidden; /* Prevents the section from being visible */
+    opacity: 0;        /* Fully transparent */
+    transition: opacity 1s ease, visibility 1s ease; /* Fade transition */
+    pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.fade-in {
+    max-height: auto;
+    visibility: visible; /* Makes the section visible */
+    opacity: 1;         /* Fully visible */
+    pointer-events: auto; /* Allow interaction when visible */
+    transition: opacity 1s ease, visibility 1s ease;
+}
+
+.posts {
+    transition: height 0.5s ease, max-height 0.5s ease; /* Smooth height transition */
+    overflow: hidden; /* Prevent overflow during transition */
 }
