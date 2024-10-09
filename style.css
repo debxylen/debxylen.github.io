@@ -252,10 +252,10 @@ footer p {
 
 
 
-
 .hidden {
     max-height: 0;
     height: 0;
+    display: none;
     visibility: hidden; /* Prevents the section from being visible */
     opacity: 0;        /* Fully transparent */
     transition: opacity 1s ease, visibility 1s ease; /* Fade transition */
@@ -275,6 +275,7 @@ footer p {
     transition: height 0.5s ease, max-height 0.5s ease; /* Smooth height transition */
     overflow: hidden; /* Prevent overflow during transition */
 }
+
 
 
 .container {

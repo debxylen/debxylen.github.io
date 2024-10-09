@@ -39,10 +39,10 @@ fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${ch
     .catch(error => console.error('Error fetching videos:', error));
 
 
-
+var onAbout = false;
 document.getElementById('about-me-button').addEventListener('click', function (event) {
     event.preventDefault(); // Prevent default anchor click behavior
-
+    onAbout = true;
     const aboutSection = document.getElementById('about-section');
     const asideSection1 = document.querySelector('.sidebar-right');
     const asideSection2 = document.querySelector('.sidebar-left');
@@ -62,6 +62,7 @@ document.getElementById('about-me-button').addEventListener('click', function (e
     updatesSection.classList.add('falldown');
     asideSection1.classList.add('falldown');
     asideSection2.classList.add('falldown');
+    aboutSection.style.display = 'block';
 
     // Listen for the animation end to hide the posts section
     updatesSection.addEventListener('animationend', function() {
@@ -78,6 +79,32 @@ document.getElementById('about-me-button').addEventListener('click', function (e
     }, { once: true });
 });
 
+
+
+
+document.querySelectorAll('#navlink').forEach(link => {
+    link.addEventListener('click', function(event) {
+        if (onAbout) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            onAbout = false;
+            const targetId = this.getAttribute('href'); // Get the target ID
+            
+            // Reload the page
+            location.reload(); 
+
+            // Set the hash after the page reloads
+            window.location.hash = targetId; // This won't work immediately, but is here for reference
+            
+            // We can add an event listener for 'load' to set the hash after the page reloads
+            window.addEventListener('load', () => {
+                window.location.hash = targetId; // Set the hash after the page has reloaded
+            });
+        } else {
+            // If shouldScroll is false, just let the link function normally
+            window.location.href = this.getAttribute('href');
+        }
+    });
+});
 
 
 
