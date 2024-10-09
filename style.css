@@ -252,8 +252,10 @@ footer p {
 
 
 
+
 .hidden {
     max-height: 0;
+    height: 0;
     visibility: hidden; /* Prevents the section from being visible */
     opacity: 0;        /* Fully transparent */
     transition: opacity 1s ease, visibility 1s ease; /* Fade transition */
@@ -262,6 +264,7 @@ footer p {
 
 .fade-in {
     max-height: auto;
+    height: auto;
     visibility: visible; /* Makes the section visible */
     opacity: 1;         /* Fully visible */
     pointer-events: auto; /* Allow interaction when visible */
@@ -272,11 +275,6 @@ footer p {
     transition: height 0.5s ease, max-height 0.5s ease; /* Smooth height transition */
     overflow: hidden; /* Prevent overflow during transition */
 }
-
-
-
-
-
 
 
 .container {
