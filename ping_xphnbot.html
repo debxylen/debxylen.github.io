@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping XPHN Bot</title>
+    <script>
+        function pingGlitch() {
+            const glitchAppUrl = 'https://xphn-bot.glitch.me/';
+
+            fetch(glitchAppUrl)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('result').innerText = `${data}`;
+                })
+                .catch(error => {
+                    document.getElementById('result').innerText = `${error.message}`;
+                });
+        }
+
+        setInterval(pingGlitch, 60000); // Ping every minute
+    </script>
+</head>
+<body>
+    <h1>Ping XPHN Bot</h1>
+    <p id="result">Pinging keep-alive...</p>
+</body>
+</html>
