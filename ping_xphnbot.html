@@ -5,18 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ping XPHN Bot</title>
     <script>
-        function pingGlitch() {
-            const glitchAppUrl = 'https://xphn-bot.glitch.me/';
+function pingGlitch() {
+    const glitchAppUrl = 'https://xphn-bot.glitch.me/';
 
-            fetch(glitchAppUrl)
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('result').innerText = `${data}`;
-                })
-                .catch(error => {
-                    document.getElementById('result').innerText = `${error.message}`;
-                });
-        }
+    fetch(glitchAppUrl)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            document.getElementById('result').innerText = `${data}`;
+        })
+        .catch(error => {
+            document.getElementById('result').innerText = `${error.message}`;
+        });
+}
     pingGlitch();
     </script>
 </head>
