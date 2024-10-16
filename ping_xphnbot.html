@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ping XPHN Bot</title>
     <script>
-function pingGlitch() {
-    const glitchAppUrl = 'https://xphn-bot.glitch.me/';
-
-fetch('https://xphn-bot.glitch.me/', { mode: 'no-cors' })
-    .then(response => {
-        console.log('Request sent, but response is opaque.');
-        return response.text();
-    });
-
-    pingGlitch();
+        fetch('https://xphn-bot.glitch.me/', { mode: 'no-cors' })
+            .then(response => {
+                console.log('Request sent, but response is opaque.');
+                return response.text();
+        });
     </script>
 </head>
 <body>
