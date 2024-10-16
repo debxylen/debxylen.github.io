@@ -8,19 +8,12 @@
 function pingGlitch() {
     const glitchAppUrl = 'https://xphn-bot.glitch.me/';
 
-fetch('https://xphn-bot.glitch.me/')
+fetch('https://xphn-bot.glitch.me/', { mode: 'no-cors' })
     .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text(); // or response.json() if the response is JSON
-    })
-    .then(data => {
-        console.log('Response data:', data);
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
+        console.log('Request sent, but response is opaque.');
+        return response.text();
     });
+
     pingGlitch();
     </script>
 </head>
