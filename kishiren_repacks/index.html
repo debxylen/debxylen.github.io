@@ -4,59 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kishiren Repacks</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.cdnfonts.com/css/do-futuristic" rel="stylesheet">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="klogo64.png">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+WARNING: Website is currently under development, and not to be used currently. Please recommend me some free file hosts haha, I need to upload the huge game files... Drop some good websites (probably DM me or comment it under my recent Insta/YouTube post?) where I can upload over 20GB atleast.
     <header>
-    <div class="header-content" style="text-align: center">
-        <p style="font-size: 36px;">Kishiren Repacks<p>
         <nav>
             <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="all.html">All Repacks</a></li>
+                <li><a href="socials.html">Socials</a></li>
             </ul>
         </nav>
-    </div>
+        <h1>Kishiren Repacks</h1>
     </header>
 
-    <div class="sidebar" style="position: absolute; height: 100%">
-        <a href="index.html"><p style="font-size: 30px">Kishiren Repacks</p></a>
-        <ul>
-            <li><a href="all.html">All Repacks</a></li>
-            <li><a href="crypto.html">Send crypto to me</a></li>
-        </ul>
-        <div class="subs" style="bottom: 50px; position: absolute; float: bottom;">
-        <p>Subscribe to my releases via email</p>
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button type="submit" class="button-39">Subscribe</button>
-        </form>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h2>Welcome to Kishiren Repacks</h2>
+        <p>High-quality repack games, optimized for you.</p>
+        <a href="#featured" class="cta-btn">Explore Games</a>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section id="featured" class="featured-games">
+        <h2>Featured Games</h2>
+        <div class="featured-container">
+            <div class="featured-game">
+                <img src="assettocorsa.jpg" alt="Assetto Corsa">
+                <h3>Assetto Corsa 1.16.4</h3>
+                <p>Assetto Corsa 1.16.4 with premium CSP 0.2.4-preview1 included. About 50% reduction in sizes. Such small, free repacks of this game aren't found easily on other sites!</p>
+                <a href="assettocorsa.html#download-btn" class="download-btn">Download Now</a>
+            </div>
+
+            <div class="featured-game">
+                <img src="carxstreet.jpg" alt="CarX Street PC">
+                <h3>CarX Street</h3>
+                <p>Popular game of the CarX series, repacked to an optimal level.</p>
+                <a href="carxstreet.html" class="download-btn">Download Now</a>
+            </div>
+
+            <div class="featured-game">
+                <img src="stray.jpg" alt="Stray">
+                <h3>Stray</h3>
+                <p>Some of the best and most underrated story games. A game full of emotions, where you are a cat fallen into a dystopian cyberpunk-ish post-apocalypse world.</p>
+                <a href="stray.html" class="download-btn">Download Now</a>
+            </div>
         </div>
-    </div>
-    <div class="main-content">
-        <img src="kishirent.png"><br><br>
-        <input type="text" id="searchInput" placeholder="Search for repacks or posts..." style="font-size: 20px; width: 90%;"><button onclick="searchRepack()" style="font-size: 20px; width: 8%;" class="button-39"><i class="fa fa-search"></i></button>
-    </div>
-    <div class="popular-posts" style="display: none;">
-        <h2>Best Repacks</h2>
-        <ul>
-            <li><a href="assettocorsa.html">Assetto Corsa 1.16.4 + CSP 0.2.4-preview1</a></li>
-            <li><a href="#"></a></li>
-        </ul>
-    </div>
-    <!-- List of posts -->
-    <div class="repackList" style="background-color: #e6e6e6;">
-        <div class="post"><a href="assettocorsa.html">Assetto Corsa 1.16.4 + CSP 0.2.4-preview1</a></div>
-        <div class="post"></div>
-        <div class="post"></div>
-        <div class="post"></div>
-    </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Kishiren Repacks</h2>
+        <p>
+           At Kishiren Repacks, I focus on providing good-quality, efficiently compressed versions of popular games. 
+           My repacks offer significantly reduced download sizes while preserving the gameplay experience, so you can dive into your games faster.
+           I also usually repack games that are hard to find on mainstream websites or don't yet have a crack or repack available.
+        </p>
+    </section>
 
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2024 Kishiren Repacks | All rights reserved.</p>
+    </footer>
 </body>
 </html>

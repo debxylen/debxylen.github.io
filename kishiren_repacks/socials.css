@@ -1,0 +1,111 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes up full height */
+}
+
+.container {
+    flex: 1; /* Allow container to expand */
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e; /* Darker background for the container */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+header {
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #00bfff; /* Blue accent */
+}
+
+.social-box {
+    background-color: #2a2a2a; /* Darker background for the box */
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px; /* Space below the box */
+}
+
+.socials {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icon {
+    background-color: #1e1e1e;
+    color: #00bfff; /* Blue accent */
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icon:hover {
+    background-color: #00bfff; /* Change on hover */
+    color: #121212; /* Text color changes on hover */
+}
+
+.info {
+    text-align: left;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #00bfff; /* Blue accent */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+.gallery {
+    margin-top: 30px;
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.gallery-images img {
+    width: 30%; /* Adjust width based on how many images you want in a row */
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+    background-color: #1e1e1e; /* Match footer background */
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+
+.clickable-image {
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.clickable-image:hover {
+    transform: scale(1.05); /* Scale image slightly when hovered */
+}
+
+.social-icon {
+    cursor: pointer; /* Ensure social icons also show pointer cursor */
+}

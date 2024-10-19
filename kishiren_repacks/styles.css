@@ -1,0 +1,165 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #3498db;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #3498db;
+    margin-top: 10px;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #2b2b2b;
+    padding: 100px 0;
+    margin-bottom: 30px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.cta-btn {
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #5dade2;
+}
+
+/* Featured Games Section */
+.featured-games {
+    padding: 50px 20px;
+}
+
+.featured-games h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 30px;
+}
+
+.featured-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.featured-game {
+    background-color: #2b2b2b;
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.featured-game img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.featured-game h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+}
+
+.featured-game p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.featured-game:hover {
+    transform: scale(1.05);
+}
+
+/* Download Button */
+.download-btn {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #5dade2;
+}
+
+/* About Section */
+.about {
+    padding: 50px 20px;
+    background-color: #333;
+}
+
+.about h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+footer p {
+    color: #888;
+}

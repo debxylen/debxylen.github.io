@@ -1,24 +1,18 @@
-function searchRepack() {
+function searchGames() {
     // Get the search input value
-    const input = document.getElementById('searchInput').value.toLowerCase();
+    let input = document.getElementById('search-bar').value.toLowerCase();
+    
+    // Get all game cards
+    let gameCards = document.getElementsByClassName('game-card');
 
-    // Get all posts
-    const posts = document.querySelectorAll('.post');
+    // Loop through each game card and check if it matches the search input
+    for (let i = 0; i < gameCards.length; i++) {
+        let gameTitle = gameCards[i].getAttribute('data-title').toLowerCase();
 
-    // Loop through each post
-    posts.forEach(post => {
-        // If the post contains the search term, display it; otherwise, hide it
-        if (post.textContent.toLowerCase().includes(input)) {
-            post.style.display = 'block';
+        if (gameTitle.includes(input)) {
+            gameCards[i].style.display = ''; // Show game card if it matches
         } else {
-            post.style.display = 'none';
+            gameCards[i].style.display = 'none'; // Hide game card if it doesn't match
         }
-    });
-}
-
-// Event listener for "Enter" key
-document.getElementById('searchInput').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        searchRepack();
     }
-});
+}

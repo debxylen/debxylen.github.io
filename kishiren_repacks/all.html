@@ -3,78 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kishiren Repacks</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link href="https://fonts.cdnfonts.com/css/do-futuristic" rel="stylesheet">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" type="image/x-icon" href="klogo64.png">
+    <title>All Repack Games - Kishiren Repacks</title>
+    <link rel="stylesheet" href="all.css">
 </head>
 <body>
     <header>
-    <div class="header-content" style="text-align: center">
-        <p style="font-size: 36px">Kishiren Repacks</p>
         <nav>
             <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#featured">Featured</a></li>
+                <li><a href="socials.html">Socials</a></li>
             </ul>
         </nav>
-    </div>
+        <h1>All Repack Games</h1>
     </header>
 
-    <div class="sidebar" style="position: absolute; height: 115 %">
-        <a href="index.html"><p style="font-size: 30px">Kishiren Repacks</p></a>
-        <ul>
-            <li><a href="all.html">All Repacks</a></li>
-            <li><a href="crypto.html">Send crypto to me</a></li>
-        </ul>
-        <div class="subs" style="bottom: 50px; position: absolute; float: bottom;">
-        <p>Subscribe to my releases via email</p>
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button type="submit" class="button-39">Subscribe</button>
-        </form>
+    <!-- Search Bar Section -->
+    <section class="search-section">
+        <input type="text" id="search-bar" onkeyup="searchGames()" placeholder="Search for games...">
+    </section>
+
+    <!-- Games List Section -->
+    <section id="games-list" class="games-list">
+        <div class="game-card" data-title="Assetto Corsa 1.16.4">
+            <img src="assettocorsa.jpg" alt="Game 1">
+            <h3>Assetto Corsa 1.16.4</h3>
+            <p>7.04GB</p>
+            <a href="game1-repack.html" class="view-btn">View Details</a>
         </div>
-    </div>
-    <div class="main-content">
-        <h1 style="font-size: 40px">All Repacks</h1>
-    </div>
-    <div class="popular-posts">
-    <input type="text" id="searchInput" placeholder="Search for repacks" style="font-size: 20px; width: 90%;"><button onclick="searchRepack()" style="font-size: 20px; width: 8%;" class="button-39"><i class="fa fa-search"></i></button>
-    </div>
-    <div class="repackList" style="">
-        <div class="posts"><a href="assettocorsa.html">Assetto Corsa 1.16.4 + CSP 0.2.4-preview1</a></div>
-        <div class="posts"><a href="#">Need For Speed Heat</a></div>
-        <div class="posts"></div>
-        <div class="posts"></div>
-    </div>
-    <script>
-    function searchRepack() {
-    // Get the search input value
-    const input = document.getElementById('searchInput').value.toLowerCase();
 
-    // Get all posts
-    const posts = document.querySelectorAll('.posts');
+        <div class="game-card" data-title="Stray: Soundtrack Edition">
+            <img src="stray.jpg" alt="Game 2">
+            <h3>Stray: Soundtrack Edition</h3>
+            <p>5.21GB</p>
+            <a href="game2-repack.html" class="view-btn">View Details</a>
+        </div>
 
-    // Loop through each post
-    posts.forEach(post => {
-        // If the post contains the search term, display it; otherwise, hide it
-        if (post.textContent.toLowerCase().includes(input)) {
-            post.style.display = 'block';
-        } else {
-            post.style.display = 'none';
-        }
-    });
-    }
+        <div class="game-card" data-title="CarX Street PC">
+            <img src="carxstreet.jpg" alt="Game 3">
+            <h3>CarX Street PC</h3>
+            <p></p>
+            <a href="game3-repack.html" class="view-btn">View Details</a>
+        </div>
 
-    // Event listener for "Enter" key
-    document.getElementById('searchInput').addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        searchRepack();
-    }
-    });
+    </section>
 
-    </script>
+    <footer>
+        <p>&copy; 2024 Kishiren Repacks | All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

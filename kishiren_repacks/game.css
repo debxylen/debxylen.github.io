@@ -1,0 +1,170 @@
+/* General styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: #ddd;
+    line-height: 1.6;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #5dade2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-top: 10px;
+}
+
+/* Game Overview Section */
+.game-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    margin-top: 20px;
+}
+
+.game-cover {
+    width: 250px;
+    height: auto;
+    margin-right: 30px;
+    border-radius: 10px;
+}
+
+.game-info {
+    max-width: 600px;
+    text-align: left;
+}
+
+.game-info h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.game-info p {
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+/* System Requirements Section */
+.system-requirements {
+    padding: 50px 20px;
+}
+
+.system-requirements h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 30px;
+}
+
+.requirements {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.requirements ul {
+    list-style-type: none;
+    text-align: left;
+    color: #ccc;
+}
+
+.requirements h3 {
+    font-size: 1.5rem;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px 20px;
+    background-color: #2b2b2b;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 30px;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.gallery-container img, video {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Download Section */
+.download {
+    padding: 50px 20px;
+}
+
+.download h2 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 30px;
+}
+
+.download-btn {
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #5dade2;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+footer p {
+    color: #888;
+}
