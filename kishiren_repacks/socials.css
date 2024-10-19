@@ -96,7 +96,11 @@ footer {
     padding: 10px 0;
     margin-top: auto; /* Push the footer to the bottom */
 }
-
+footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
 .clickable-image {
     transition: transform 0.3s ease; /* Smooth transition for scaling */
     cursor: pointer; /* Change cursor to pointer on hover */

@@ -163,3 +163,9 @@ footer {
 footer p {
     color: #888;
 }
+
+footer {
+    width: 100%;
+    bottom: 0;
+    position: fixed;
+}
