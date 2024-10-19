@@ -3,82 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>XPHN Bot Status</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet"> 
-    <style>
-/* General Page Styling */
-        body {
-            font-family: 'Google Sans', sans-serif;
-            background-color: ; /* Dark Blue-Gray Background */
-            color: #e2e8f0; /* Light Text Color */
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .status {
-            text-align: center;
-            padding: 20px;
-            background-color: #2d3748; /* Slightly Lighter Gray */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            max-width: 500px;
-            width: 100%;
-        }
-
-        #status-text {
-            font-size: 1.5rem;
-            margin: 10px 0;
-        }
-
-        .online {
-            color: #48bb78; /* Green for online */
-            font-weight: bold;
-        }
-
-        .offline {
-            color: #f56565; /* Red for offline */
-            font-weight: bold;
-        }
-
-        button {
-            background-color: #4a5568;
-            color: #edf2f7;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            font-size: 1rem;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #718096; /* Lighter blue-gray on hover */
-        }
-    </style>
+    <title>Status - XPHN Bot</title>
+    <link rel="stylesheet" href="status.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="status">
-        <h1>XPHN Bot Status</h1>
-        <p id="status-text">Checking bot status...</p>
-    </div>
+    <header class="status-header">
+        <p class="h1">XPHN Bot Status</p>
+        <p class="p">No recent outages reported. View past status and outages at the external <a href="https://stats.uptimerobot.com/oP72vUD2oK" target="_blank">Status Page</a></p>
+    </header>
+    <main>
+        <section class="status-section">
+            <p class="h2">System Status</p>
+            <div class="status-card" id="bot-status-card">
+                <p class="h3">Bot Status</p>
+                <p id="bot-status">Online</p>
+            </div>
+            <div class="status-card online">
+                <p class="h3">Web Status</p>
+                <p id="api-status">Operational</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 XPHN Bot. All rights reserved.</p>
+    </footer>
 
 <script>
     async function checkBotStatus() {
         try {
-            const response = await fetch('https://cors-anywhere.herokuapp.com/https://xphn-keep-alive.vercel.app/api/ping', { method: 'GET'});
+            const response = await fetch(`http://api.allorigins.win/get?url=${encodeURIComponent('https://xphn-keep-alive.vercel.app/api/ping')}`, { method: 'GET'});
             const responseText = await response.text();
+            var element = document.getElementById("bot-status-card");
+            var eText = document.getElementById("bot-status");
             console.log(responseText);
             if (responseText.includes('Pinged!')) {
-                document.getElementById("status-text").innerHTML = "Bot is <span class='online'>ONLINE</span>";
+                element.classList.remove("offline");
+                element.classList.add("online");
+                eText.innerHTML = "Online";
             } else {
-                document.getElementById("status-text").innerHTML = "Bot is <span class='offline'>OFFLINE</span>";
+                element.classList.remove("online");
+                element.classList.add("offline");
+                eText.innerHTML = "Offline";
             }
         } catch (error) {
-            document.getElementById("status-text").innerHTML = "Bot is <span class='offline'>OFFLINE</span>";
+            console.log("Couldn't get status.")
+            element.classList.remove("online");
+            element.classList.add("offline");
+            eText.innerHTML = "Offline";
         }
     }
 

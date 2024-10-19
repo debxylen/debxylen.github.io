@@ -6,8 +6,16 @@ body {
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-    font-variation-settings:
-    "wdth" 95;
+    font-variation-settings: "wdth" 95;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .hero {
@@ -21,7 +29,7 @@ body {
     color: white;
 }
 
-.hero h1 {
+.hero #h1 {
     font-size: 3em;
     margin: 0;
 }
@@ -41,6 +49,17 @@ nav ul li {
     margin: 0 15px;
 }
 
+#li1 {
+    animation: fadeInAnimation ease 3.1s;
+}
+#li2 {
+    animation: fadeInAnimation ease 3.0s;
+}
+#li3 {
+    animation: fadeInAnimation ease 3.3s;
+}
+
+
 nav a {
     color: white;
     text-decoration: none;
@@ -55,10 +74,18 @@ section {
     background: #22232b;
     border-radius: 5px;
     border-color: white;
-    border: solid 1px; 
+    border: solid 1px;
     color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(255,255,255, 1);
+    opacity: 0; /* Hidden by default */
+    transform: translateX(-100px); /* Move off-screen */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+}
+
+section.visible {
+    opacity: 1; /* Fade in */
+    transform: translateX(0); /* Move back to original position */
 }
 
 .button {
@@ -81,11 +108,48 @@ footer {
     color: white;
 }
 
-
 * {
     -ms-overflow-style: none;  /* Internet Explorer 10+ */
     scrollbar-width: none;  /* Firefox */
 }
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     display: none;  /* Safari and Chrome */
 }
+
+html {
+    scroll-behavior: smooth; /* For smooth scroll on all links */
+}
+
+/* Fade in and fade out animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        border-color: white; /* Start with the highlight border color */
+        box-shadow: 0 0 15px white; /* Start with the highlight glow */
+    }
+    100% {
+        border: solid 1px white;
+        box-shadow: 0 0 10px white;
+    }
+}
+
+/* Highlight effect */
+.highlight {
+    border: 3px solid white; /* Highlight border */
+    box-shadow: 0 0 15px white; /* Highlight glow */
+    animation: fadeIn 0.5s forwards; /* Fade in */
+}
+
+/* Fade out effect for highlight only */
+.fade-out {
+    animation: fadeOut 0.5s forwards; /* Fade out */
+}
+ 
