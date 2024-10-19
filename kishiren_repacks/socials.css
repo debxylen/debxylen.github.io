@@ -99,7 +99,6 @@ footer {
 footer {
     width: 100%;
     bottom: 0;
-    position: fixed;
 }
 .clickable-image {
     transition: transform 0.3s ease; /* Smooth transition for scaling */
