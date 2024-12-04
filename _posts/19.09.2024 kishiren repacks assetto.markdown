@@ -1,7 +1,0 @@
----
-layout: post
-title: "Kishiren Repacks - Game Installer Optimised"
-date: 2024-09-19
----
-
-Assetto Corsa 1.16.4 will now install under 6 minutes even on low-medium end computers.

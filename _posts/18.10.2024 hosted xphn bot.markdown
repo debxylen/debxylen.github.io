@@ -1,7 +1,0 @@
----
-layout: post
-title: "XPHN Bot: Website Deployed, and Bot Hosted!"
-date: 2024-10-18
----
-
-Somehow managed to host the bot 24/7 👀

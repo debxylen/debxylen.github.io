@@ -1,7 +1,0 @@
----
-layout: post
-title: "XYL TestNet Stable Version"
-date: 2024-11-15
----
-
-Finally, a stable version of XYL TestNet is done. Its the first version that actually feels stable/complete. End of version alpha. (This post was made on 4th of december actually. I forgot to update from a long time)

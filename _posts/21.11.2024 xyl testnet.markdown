@@ -1,8 +1,0 @@
----
-layout: post
-title: "XYL TestNet v2: Major Update"
-date: 2024-11-21
----
-
-
-XYL TestNet got a major update. A lot of things are changed. Since this is a testnet, all balances are cleared (aka just me and my testing account LOL) and minted again properly. To mention a few, smart contracts on XYL's own instruction set, better security and system, mining rewards, gas management are added.(This post was made on 4th of december actually. I forgot to update from a long time)
