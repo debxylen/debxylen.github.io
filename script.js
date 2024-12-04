@@ -21,7 +21,7 @@ window.addEventListener('hashchange', handleHashChange);
 handleHashChange();
 
 
-const apiKey = 'AIzaSyBUANd3XnO1nlQzVnpuJ3x-BpF-lW443xU';
+const apiKey = 'AIzaSyBRp-ce287NKItbR_HNI7nTTY3XWE3FqqY';
 const channelId = 'UCdcZck-VWD2DQ6fC2DVJNog';
 const maxResults = 200; // Adjust as needed
 
