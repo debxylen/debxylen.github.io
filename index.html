@@ -1,0 +1,91 @@
+---
+layout: default
+title: Xylen's Dashboard
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xylen - Personal Projects and Brands">
+    <title>Xylen's Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <p>Xylen</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html#posts" id="about-me-button">About Me</a></li>
+                <li><a href="index.html#posts" id="navlink" class="posts-link">Posts</a></li>
+                <li><a href="index.html#projects" id="navlink" class="projects-link">Projects</a></li>
+                <li><a href="index.html#socials" id="navlink" class="socials-link">Socials</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Left sidebar (repositories/projects section) -->
+        <aside class="column sidebar-left" id="projects">
+            <p style="font-size: 20px; font-weight: 500;">Projects</p>
+            <ul>
+                <li><a href="Kishiren_Repacks/">Kishiren Repacks</a></li>
+                <li><a href="ARBUX/">Arbux Miner</a></li>
+                <li><a href="https://www.youtube.com/@debxylen">Video Editing</a></li>
+                <li><a href="XPHN_Bot/">XPHN Bot</a></li>
+            </ul>
+            <div class="video-container" id="random-video"></div>
+
+        </aside>
+
+        <!-- Center (updates/posts section) -->
+        <main id="posts" class="column">
+            <section class="updates">
+                <p class="updates-title" style="font-size: 24px; font-weight: 500;">Latest Updates</p>
+                <div class="updates-section">
+                    {% for post in site.posts %}
+                        <div class="update-post">
+                            <p><strong>{{ post.title }}</strong></p>
+                            <p>{{ post.excerpt }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <section id="about-section" class="hidden">
+                <h2>About Me</h2>
+                <p>random goofy goober, probably chill dude and kinda restarted (?)</p>
+                <p>omni doer (idk i do alotta stuff hence omni) programmer, developer, editor, youtuber, 3d artist, game repacker uhhh and i dont remember much rn but yea whatever</p>
+                <p>just an average internet dude from discord tbh... also a reddit/4chan enjoyer</p>
+                <p>playing war thunder, assetto corsa with csp mods and reshade, roblox, minecraft with shaders on a GT710 🔥 i see not much problem with 12fps idk why people complain at 60fps</p>
+                <p>also a car guy who heavily fw jdm specifically, like jzx90 mark ii, nismo gt-r r35, r32 gt-r, miata NA 🎀, rx7 fc and veilside, lexus lfa, new honda civic and nsx, trueno sprinter ae86 and gt86/subaru brz, and so much more oh my god. </p>
+                <p>--- i will add more stuff but i honestly dont know what to add ---</p>
+            </section>
+
+
+        </main>
+
+        <!-- Right sidebar (socials section) -->
+        <aside class="column sidebar-right" id="socials">
+            <p style="font-size: 20px; font-weight: 500;">Socials</p>
+            <ul>
+                <li><a href="https://instagram.com/debxylen">Instagram</a></li>
+                <li><a href="https://github.com/debxylen/">GitHub</a></li>
+                <li><a href="https://www.youtube.com/@debxylen">YouTube</a></li>
+            </ul>
+            <div class="discord-container"><iframe src="https://discord.com/widget?id=798527125908619324&theme=dark" width="250" height="300" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+        </aside>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2024 Xylen. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+	
