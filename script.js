@@ -109,4 +109,23 @@ document.querySelectorAll('#navlink').forEach(link => {
 
 
 
+function copyToClipboard(element, address) {
+        navigator.clipboard.writeText(address).then(() => {
+            const checkmark = element.querySelector('.checkmark');
+            const copyIcon = element.querySelector('.copy-icon');
 
+            // Hide the copy icon and show the checkmark
+            // copyIcon.style.visibility = 'hidden';
+            copyIcon.style.display = 'none';
+            checkmark.classList.add('copied');
+
+            // Revert after 1 second
+            setTimeout(() => {
+                checkmark.classList.remove('copied');
+                // copyIcon.style.visibility = 'visible';
+                copyIcon.style.display = 'inline';
+            }, 1000); // 1 second delay
+        }).catch(err => {
+            console.error("Could not copy text: ", err);
+        });
+}

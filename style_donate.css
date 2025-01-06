@@ -39,41 +39,14 @@ nav ul li a {
 }
 
 .container {
-    display: flex;
     margin: 20px;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     min-height: 72vh;
 }
 
-
-.sidebar-left, .sidebar-right {
-    background-color: #24292e;
-    padding: 20px;
-    width: 20vw;
-    margin: 0 20px;
-    border: 1px solid #e1e4e8;
-    border-radius: 6px;
-    display: flex; /* Enable flexbox */
-    flex-direction: column;
-    transition: border-color 0.3s, box-shadow 0.3s;
-}
-
-.sidebar-left ul, .sidebar-right ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.sidebar-left ul li, .sidebar-right ul li {
-    margin-bottom: 10px;
-}
-
-.sidebar-left ul li a, .sidebar-right ul li a {
-    text-decoration: none;
-    color: #0366d6;
-}
-
 main {
-    width: 60%;
+    width: 80%;
     height: 72vh;
     padding: 20px;
     background-color: #24292e;
@@ -85,10 +58,9 @@ main {
 
 .update-post {
     background-color: #0d1117;
-    padding: 15px;
-    border: 1px solid #c8e1ff;
-    border-radius: 6px;
+    border-radius: 4px;
     margin-bottom: 15px;
+    padding: 15px;
 }
 
 footer {
@@ -103,21 +75,6 @@ footer {
     width: 100%;
 }
 
-
-
-
-.projects-list li, .skills-list li {
-    margin-bottom: 10px;
-}
-
-.projects-list li a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-.projects-list li a:hover {
-    text-decoration: underline;
-}
 
 /* Footer */
 footer {
@@ -140,37 +97,6 @@ footer p {
 }
 
 
-.video-container {
-    flex: 1; /* Take up remaining space */
-    overflow: hidden; /* Prevent overflow */
-    position: relative; /* For absolute positioning of the iframe */
-}
-
-.video-container iframe {
-    position: absolute; /* Position absolutely within the container */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: 100%; /* Scale to fit parent */
-    height: 100%; /* Scale to fit parent */
-    transform: translate(-50%, -50%); /* Center the iframe */
-    border: none; /* Optional: remove border */
-}
-
-.discord-container {
-    flex: 1; /* Take up remaining space */
-    overflow: hidden; /* Prevent overflow */
-    position: relative; /* For absolute positioning of the iframe */
-}
-
-.discord-container iframe {
-    position: absolute; /* Position absolutely within the container */
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    width: 100%; /* Scale to fit parent */
-    height: 100%; /* Scale to fit parent */
-    transform: translate(-50%, -50%); /* Center the iframe */
-    border: none; /* Optional: remove border */
-}
 
 .updates-section {
     display: flex;
@@ -223,7 +149,7 @@ footer p {
 }
 
 /* Float-up for all sections */
-.sidebar-left, #posts, .sidebar-right {
+#posts {
     opacity: 0; /* Start hidden */
     animation: floatUp 0.5s ease-out forwards;
 }
@@ -231,12 +157,6 @@ footer p {
 /* Animation delays to stagger appearance */
 #posts {
     animation-delay: 0.1s;
-}
-.sidebar-left {
-    animation-delay: 0.3s;
-}
-.sidebar-right {
-    animation-delay: 0.45s;
 }
 
 /* Define keyframes for float-up */
@@ -316,20 +236,10 @@ body {
 
 
 /* DONATE */
-#donation-box {
-    margin: 20px;
-    font-family: Arial, sans-serif;
-}
-
-.donation-options {
-    margin-top: 10px;
-}
 
 .donation-option {
     position: relative;
-    margin: 10px 0;
     cursor: pointer;
-    padding: 5px 0;
     transition: background-color 0.2s ease;
 }
 
@@ -343,7 +253,7 @@ body {
 .copy-icon, .checkmark {
     visibility: hidden; /* Hidden by default */
     position: absolute;
-    right: 0;
+    right: 0.75vw;
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;

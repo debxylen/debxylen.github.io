@@ -1,0 +1,91 @@
+<section id="donation-box">
+    <h2>Support My Work</h2>
+    <p>
+        Your support fuels my projects and innovation! Simply click on a wallet address to donate using your preferred cryptocurrency.
+    </p>
+    <div class="donation-options">
+        <div class="donation-option" onclick="copyToClipboard(this, '0x2C0ce11bC9B0849781F7008db708E50EE1714Df7')">
+            Ethereum (ETH): <span class="crypto-address">0x2C0ce11bC9B0849781F7008db708E50EE1714Df7</span>
+            <span class="copy-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/>
+                </svg>
+            </span>
+            <span class="checkmark">&#10003;</span>
+        </div>
+        <!-- Repeat for other cryptocurrencies -->
+    </div>
+</section>
+
+<style>
+#donation-box {
+    margin: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.donation-options {
+    margin-top: 10px;
+}
+
+.donation-option {
+    position: relative;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    transition: background-color 0.2s ease;
+}
+
+.crypto-address {
+    font-weight: bold;
+    color: #333;
+    user-select: none;
+    display: inline-block; /* Make the address part of the same flow */
+}
+
+.copy-icon, .checkmark {
+    visibility: hidden; /* Hidden by default */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.donation-option:hover .copy-icon {
+    visibility: visible; /* Show copy icon on hover */
+}
+
+.checkmark {
+    color: black;
+    font-size: 18px;
+}
+
+.copied {
+    visibility: visible; /* Show the checkmark */
+}
+
+</style>
+
+<script>
+    function copyToClipboard(element, address) {
+        navigator.clipboard.writeText(address).then(() => {
+            const checkmark = element.querySelector('.checkmark');
+            const copyIcon = element.querySelector('.copy-icon');
+
+            // Hide the copy icon and show the checkmark
+            copyIcon.style.visibility = 'hidden';
+            checkmark.classList.add('copied');
+
+            // Revert after 1 second
+            setTimeout(() => {
+                checkmark.classList.remove('copied');
+                copyIcon.style.visibility = 'visible';
+            }, 1000); // 1 second delay
+        }).catch(err => {
+            console.error("Could not copy text: ", err);
+        });
+    }
+
+</script>
