@@ -457,7 +457,7 @@
         .then(html => {
         const divContent = new DOMParser().parseFromString(html, 'text/html').querySelector('#posts-content').outerHTML;
         const headContent = new DOMParser().parseFromString(html, 'text/html').querySelector('head').outerHTML;
-        const jsContent = new DOMParser().parseFromString(html, 'text/html').querySelector('#pagescript').outerHTML;
+        const jsContent = new DOMParser().parseFromString(html, 'text/html').querySelector('#pagescript').outerHTML + new DOMParser().parseFromString(html, 'text/html').querySelector('#scrollscript').outerHTML;
         const iframe = document.getElementById('postFrame');
         iframe.srcdoc = headContent + divContent + jsContent;
       })
