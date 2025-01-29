@@ -73,7 +73,7 @@
               <a class="hover:text-purple-400 transition" href="#about"> About </a>
               <a class="hover:text-purple-400 transition" href="#projects"> Projects </a>
               <a class="hover:text-purple-400 transition" href="#skills"> Skills </a>
-              <a class="hover:text-purple-400 transition" href="#updates"> Updates </a>
+              <a class="hover:text-purple-400 transition" href="#updates"> Posts </a>
               <a class="hover:text-purple-400 transition" href="#socials"> Socials </a>
             </div>
             <div class="block md:hidden" id="borgor">
@@ -108,12 +108,11 @@
           <div class="grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
               <h2 class="text-3xl font-bold text-purple-400"> About Me </h2>
-              <p class="text-gray-300 text-lg">
-              Just a random person who’s probably a little retarded and a bit of a geek sometimes.<br><br>
-              I'm into programming, editing, 3D art, game repacking, software, game and web development and a bunch of other stuff. It's mostly about having fun (and sometimes getting really stressed into them) with whatever catches my interest. Tbh, I (try to) do a lot, but it's hard to keep track of it all.<br><br>
-              Mostly, I'm just an average internet dude.<br><br>
-              I enjoy games like Forza Horizon 4, War Thunder, Minecraft, Assetto Corsa, and occasionally Roblox.<br>
-              I’m into cars, jets, spacecraft, the cosmos, computers, and a lot more.<br><br>
+              <p class="text-gray-300 text-lg"> Just a random person who’s probably a little retarded and a bit of a geek sometimes. <br>
+                <br> I'm into programming, editing, 3D art, game repacking, software, game and web development and a bunch of other stuff. It's mostly about having fun (and sometimes getting really stressed into them) with whatever catches my interest. Tbh, I (try to) do a lot, but it's hard to keep track of it all. <br>
+                <br> Mostly, I'm just an average internet dude. <br>
+                <br> I enjoy games like Forza Horizon 4, War Thunder, Minecraft, Assetto Corsa, and occasionally Roblox. <br> I’m into cars, jets, spacecraft, the cosmos, computers, and a lot more. <br>
+                <br>
               <p class="text-gray-300 text-lg">
                 <!-- I get distracted by new ideas all the time, but that's where the chaos happens, right? -->
               </p>
@@ -382,38 +381,7 @@
       <section class="py-24 bg-gray-800/50" id="updates">
         <div class="container mx-auto px-6">
           <h2 class="text-3xl font-bold text-purple-400 mb-12"> Posts and Updates </h2>
-          <div class="max-h-96 overflow-y-auto space-y-6 pr-4 scrollbar-thin scrollbar-thumb-purple-400 scrollbar-track-gray-700 hover:scrollbar-thumb-purple-600 scrollbar-rounded-full">
-            <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center mb-4">
-                <span class="text-purple-400"> 22.1.2025 2:01AM </span>
-              </div>
-              <p class="text-gray-300"> Man, I'm so tired and I have 6 assignments due tomorrow, but here I am, working on this website lol. </p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center mb-4">
-                <span class="text-purple-400"> 21.1.2025 11:24PM </span>
-              </div>
-              <p class="text-gray-300"> Found a bug in the new project. Fixed the bug. Created three new bugs. Progress ig? </p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center mb-4">
-                <span class="text-purple-400"> 21.1.2025 9:15PM </span>
-              </div>
-              <p class="text-gray-300"> Started working on a new project. Actually rewrite of one. Don't ask me why, I don't know either. </p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center mb-4">
-                <span class="text-purple-400"> 20.1.2025 6:28PM </span>
-              </div>
-              <p class="text-gray-300"> Lost 5$ on memecoins and guess what? I'll do it again. </p>
-            </div>
-            <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center mb-4">
-                <span class="text-purple-400"> 19.1.2025 1:57AM </span>
-              </div>
-              <p class="text-gray-300"> By the way, Sorry for no update for a long time. Nothing too much to update. Exams are coming close though. Also yeah I'm revamping some of my websites using tailwind.css, its pretty cool. </p>
-            </div>
-          </div>
+          <iframe id="postFrame" style="width: 100%; height: 50vh;"></iframe>
           <br>
           <a href="posts.html" class="text-indigo-400">View more...</a>
         </div>
@@ -444,20 +412,21 @@
       </section>
       <footer class="py-8 border-t border-gray-800" id="footer">
         <div class="flex justify-center space-x-3 container mx-auto px-5 text-center">
-          <a class="justify-center hover:text-purple-400 transition" href="https://github.com/debxylen/debxylen.github.io"><i class="fa-brands fa-github hover:text-purple-400 text-gray-500 text-2xl"></i></a>
-          <p class="text-gray-400 mb-3"> Made with code, hardwork and <i class="fa-solid fa-heart"></i></p>
+          <a class="justify-center hover:text-purple-400 transition" href="https://github.com/debxylen/debxylen.github.io">
+            <i class="fa-brands fa-github hover:text-purple-400 text-gray-500 text-2xl"></i>
+          </a>
+          <p class="text-gray-400 mb-3"> Made with code, hardwork and <i class="fa-solid fa-heart"></i>
+          </p>
         </div>
         <div class="flex justify-center space-x-6 text-gray-500"></div>
       </footer>
     </div>
     <script src="SmoothScroll.js"></script>
     <script>
-
       function vh(percent) {
         var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
         return (percent * h) / 100;
       }
-
       const hamburgerButton = document.getElementById('borgor');
       const header = document.getElementById('header');
       const mobileMenu = document.getElementById('mobile-menu');
@@ -468,7 +437,6 @@
       const headerheight = header.offsetHeight;
       document.body.removeChild(clonedElement);
       header.style.height = `${headerheight}px`;
-
       async function mobileMenuHandler() {
         if (mobileMenu.classList.contains('hidden')) {
           header.style.height = `${headerheight + menuheight + vh(2)}px`;
@@ -480,10 +448,20 @@
           header.style.height = `${headerheight}px`;
         }
       }
-
       hamburgerButton.addEventListener('click', mobileMenuHandler);
       hamburgerButton.addEventListener('mouseover', mobileMenuHandler);
       hamburgerButton.addEventListener('mouseout', mobileMenuHandler);
+
+      fetch('posts.html')
+        .then(response => response.text())
+        .then(html => {
+        const divContent = new DOMParser().parseFromString(html, 'text/html').querySelector('#posts-content').outerHTML;
+        const headContent = new DOMParser().parseFromString(html, 'text/html').querySelector('head').outerHTML;
+        const jsContent = new DOMParser().parseFromString(html, 'text/html').querySelector('#pagescript').outerHTML;
+        const iframe = document.getElementById('postFrame');
+        iframe.srcdoc = headContent + divContent + jsContent;
+      })
+      .catch(error => console.error('Error fetching or parsing the HTML:', error));
 
       const apiKey = 'AIzaSyBRp-ce287NKItbR_HNI7nTTY3XWE3FqqY';
       const channelId = 'UCdcZck-VWD2DQ6fC2DVJNog';
