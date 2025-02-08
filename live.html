@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Live Earth Updates - debxylen</title>
+    <link rel="icon" type="image/x-icon" href="content/blobsmile.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <script crossorigin="anonymous" referrerpolicy="no-referrer" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      * {
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+      }
+      ::-webkit-scrollbar {
+      display: none;
+      }
+      html,
+      body {
+      max-width: 100%;
+      overflow-x: hidden;
+      }
+      .feed-container {
+      height: 50vh;
+      padding: 20px;
+      }
+      #eventFeed {
+      height: 50vh;
+      overflow-y: auto;
+      }
+      .event-item {
+      background-color: #1F2937;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      }
+      .event-item p {
+      font-size: 1.2rem;
+      }
+    </style>
+  </head>
+  <body class="h-full w-full text-base-content bg-gray-900 text-white">
+    <header class="fixed w-full bg-gray-900/50 backdrop-blur-sm z-50 border-b border-gray-800">
+      <nav class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <div class="text-2xl font-bold text-purple-500">debxylen</div>
+          <a href="./" class="text-purple-400 hover:text-purple-300 transition">Back to Home</a>
+        </div>
+      </nav>
+    </header>
+    <div class="relative pt-[10vh]">
+      <main class="feed-container mx-auto my-auto mt-[10vh] w-2/3 h-2/3 p-4 bg-gray-800/50 rounded-lg shadow-lg">
+        <h1 class="text-4xl font-semibold mb-6">Live Earth Updates</h1>
+        <div id="eventFeed">
+          <!-- Event items will be logged here -->
+        </div>
+      </main>
+    </div>
+    <footer class="py-8 border-gray-800" id="footer">
+      <div class="flex justify-center space-x-3 container mx-auto px-5 text-center">
+        <a class="justify-center hover:text-purple-400 transition" href="https://github.com/debxylen/debxylen.github.io">
+        <i class="fa-brands fa-github hover:text-purple-400 text-gray-500 text-2xl"></i>
+        </a>
+        <p class="text-gray-400 mb-3">Made with code, hardwork and <i class="fa-solid fa-heart"></i></p>
+      </div>
+    </footer>
+    <script src="SmoothScroll.js" id="scrollscript"></script>
+    <script>
+      // Event feed container
+      const eventFeed = document.getElementById('eventFeed');
+      
+      // Function to add new event items and auto-scroll
+      function logEvent(message) {
+        const eventElement = document.createElement('div');
+        eventElement.classList.add('event-item');
+        eventElement.innerHTML = `<p>${message}</p>`;
+        eventFeed.appendChild(eventElement);
+      
+        eventElement.scrollIntoView({ behavior: 'smooth', block: 'end' });
+      }
+      
+      // 🚀 Welcome to Ohio
+      let cheeseIndex = 0;
+      const cheeseTypes = [
+      'Cheddar', 'Brie', 'Gouda', 'Swiss', 'Melted Cheese',
+      'Blue Moon', 'Intergalactic Stilton', 'Velveeta', 'Cheeseplosion'
+      ];
+      setInterval(() => {
+      const pun = Math.random() < 0.5
+      ? (Math.random() < 0.5 ? "Grate job!" : "Cheddar later, folks!")
+      : "";
+      if (Math.random() < 0.05) {
+      logEvent("チーズ無限ループ、終わらない!!! 🧀🔄 (Chīzu mugen rūpu, owaranai!!! – The infinite cheese loop, never-ending!!!)");
+      } else {
+      logEvent(`🧀 Cosmic Cheese of the moment: ${cheeseTypes[cheeseIndex % cheeseTypes.length]}! ${pun}`);
+      cheeseIndex++;
+      }
+      }, 1500);
+      
+      // 🥑 Avocado: The Ultimate Dancefloor Destroyer!
+      function dancingAvocado() {
+      const moves = ['twirl', 'flop', 'spin', 'moonwalk', 'floss', 'breakdance', 'twerk', 'salsa', 'robot dance'];
+      let move = moves[Math.floor(Math.random() * moves.length)];
+      let extra = "";
+      if (Math.random() < 0.5) {
+      extra = " and then launches into a spontaneous electric slide!";
+      }
+      if (Math.random() < 0.05) {
+      logEvent("アボカドは踊り続ける... 🥑💃 (Abokado wa odoritsudzukeru… – The avocado keeps dancing…)");
+      } else {
+      logEvent(`🥑 Avocado is going wild with a ${move}${extra}`);
+      }
+      setTimeout(dancingAvocado, Math.random() * 4000 + 500);
+      }
+      dancingAvocado();
+      
+      // 🍌 Banana: Emotions Gone Bananas!
+      function confusedBanana() {
+      const feelings = [
+      'confused', 'angry', 'sad', 'excited', 'mystified',
+      'dizzy', 'paranoid', 'elated', 'overwhelmed'
+      ];
+      let emotion = feelings[Math.floor(Math.random() * feelings.length)];
+      const drama = Math.random() < 0.4 ? "!!!" : ".";
+      if (Math.random() < 0.05) {
+      logEvent("バナナ神は目覚めた!!! 🍌🔥🔥🔥 (BA-NA-NA KAMI WA MEZAMETA!!! – THE BANANA GOD HAS AWAKENED!!!)");
+      } else if (Math.random() < 0.25) {
+      logEvent(`🍌 Banana is having an existential meltdown: "${emotion.toUpperCase()}!!"`);
+      } else {
+      logEvent(`🍌 Banana is feeling ${emotion}${drama}`);
+      }
+      setTimeout(confusedBanana, Math.random() * 2000 + 1000);
+      }
+      confusedBanana();
+      
+      // ☁️💨 Farting Clouds Rampage: Turbo Edition!
+      setInterval(() => {
+      const farts = [
+      "雲はおならをした…💨しかし、なぜ？ (Kumo wa onara o shita...💨 Shikashi, naze? – The cloud farted...💨 But why?)",
+      "哲学的なおならの音...☁️💨 (Tetsugakuteki na onara no oto… – A philosophical fart sound…)",
+      "空が静かになった……いや、またおならした☁️💨🔥 (Sora ga shizuka ni natta… Iya, mata onara shita ☁️💨🔥 – The sky became silent… no, it farted again ☁️💨🔥)"
+      ];
+      if (Math.random() < 0.05) {
+      logEvent(farts[Math.floor(Math.random() * farts.length)]);
+      } else if (Math.random() < 0.3) {
+      logEvent("☁️ A bashful cloud whispers, 'Pardon me...'");
+      } else {
+      const intensity = Math.floor(Math.random() * 20) + 1;
+      const adjectives = ["mighty", "explosive", "colossal", "tiny but fierce"];
+      const adj = adjectives[Math.floor(Math.random() * adjectives.length)];
+      logEvent(`☁️💨 A ${adj} cosmic cloud blasts a fart of intensity ${intensity}!`);
+      }
+      }, 800);
+      
+      // 🧦💨 Sock Thief Unleashed: High-Speed Heists!
+      let socksStolen = 0;
+      setInterval(() => {
+      let theft = Math.floor(Math.random() * 5) + 1;
+      socksStolen += theft;
+      let exclamation = Math.random() < 0.4 ? "They're on a sock rampage!" : "";
+      if (Math.random() < 0.05) {
+      logEvent("くつ下泥棒がすべてを盗んだ！ 🧦💨 (Kutsushita dorobō ga subete o nusunda! – The sock thief has stolen everything!)");
+      
+      } else {
+      logEvent(`🧦💨 Sock thief strikes again! Total socks: ${socksStolen} (just snatched ${theft}) ${exclamation}`);
+      }
+      }, 2000);
+      
+      // 🥔 Existential Potato: Deep Thoughts & Spud-tacular Rants!
+      function existentialPotato() {
+      const ponderings = [
+      "Am I a potato or just a hot tub of existential fries?",
+      "If I mash myself, do I become one with the fries?",
+      "What’s the meaning of spud in a world full of mash?",
+      "Do I dream of electric ketchup?",
+      "Is my destiny to be baked, fried, or smashed into oblivion?",
+      "Am I a potato, or am I just an illusion in the vast void?"
+      ];
+      if (Math.random() < 0.05) {
+      logEvent("なぜ私は存在するのか... 🤔🥔 (Naze watashi wa sonzai suru no ka… – Why do I exist...)");
+      } else {
+      let thought = ponderings[Math.floor(Math.random() * ponderings.length)];
+      logEvent(`🥔 Potato wonders: “${thought}”`);
+      }
+      setTimeout(existentialPotato, Math.random() * 3000 + 1500);
+      }
+      existentialPotato();
+      
+      const memePhrases = [
+      "so i bought some property in egypt... and what they do is, they give you the property.", "may god teach not interrupt dragon-tiger fight", "[-11555 social credits, send to re-education zone in urghyur autonomous zone]",
+      "may god bless you with mountains of silver and gold", "buttadog, dog witta butta onem", "KITTY, YOU CAN HAZ CHEEZBORGOR!",
+      ];
+      setInterval(() => {
+      if (Math.random() < 0.3) {
+      let phrase = memePhrases[Math.floor(Math.random() * memePhrases.length)];
+      logEvent(`💥 Basement Guy: ${phrase}`);
+      }
+      }, 1200);
+      
+      // 🔥 Chaos Injector: Total Anarchy!
+      function chaosInjector() {
+      const events = [
+      () => logEvent("🔥 A fireball of madness just exploded!"),
+      () => logEvent("💦 A tsunami of absurdity is crashing in!"),
+      () => logEvent("🌪️ A twister of weirdness is tearing through reality!"),
+      () => logEvent("🎉 Spontaneous party alert: Chaos reigns supreme!")
+      ];
+      let eventFunc = events[Math.floor(Math.random() * events.length)];
+      eventFunc();
+      setTimeout(chaosInjector, Math.random() * 3000 + 500);
+      }
+      chaosInjector();
+      
+      // 🌌 From the Abyss: Random Void Commentary!
+      const voidComments = [
+      "The universe is a giant rubber duck.",
+      "Reality is just a simulation run by potatoes.",
+      "Beware the digital void; it's plotting something weird.",
+      "Existence is merely a glitch in the Matrix.",
+      "The sock thief? They might know the secrets of the cosmos."
+      ];
+      setInterval(() => {
+      if (Math.random() < 0.2) {
+      let comment = voidComments[Math.floor(Math.random() * voidComments.length)];
+      logEvent(`🌌 From the void: "${comment}"`);
+      }
+      }, 2500);
+      
+    </script>
+  </body>
+</html>
