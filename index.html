@@ -103,7 +103,7 @@
   </style>
 </head>
 
-<body class="h-full text-base-content">
+<body class="h-full max-w-full overflow-hidden text-base-content">
   <div class="bg-gray-900 text-white" id="main">
     <header class="fixed w-full bg-gray-900/50 backdrop-blur-sm z-50 border-b border-gray-800" id="header">
       <nav class="container mx-auto px-6 py-4">
@@ -143,9 +143,11 @@
         <div class="max-w-3xl">
           <div class="flex flex-row items-center">
             <img src="content/blobsmile.svg" class="max-w-20 max-h-15 my-auto self-center">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Hey, I'm <span class="text-purple-500"> Xylen!</span></h1>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">Hey, I'm <span class="text-purple-500">
+                Xylen!</span></h1>
           </div>
-          <p class="text-xl md:text-2xl text-gray-300 mb-8">Programmer, developer, trader, editor, YouTuber, 3D artist, game
+          <p class="text-xl md:text-2xl text-gray-300 mb-8">Programmer, developer, trader, editor, YouTuber, 3D artist,
+            game
             repacker, coder, creator, and much more.</p>
           <p class="text-lg text-purple-400">Built different.</p>
         </div>
@@ -179,7 +181,7 @@
             </div>
             <p class="text-gray-400 italic">"A jerk of all trades, a jack of some."</p>
           </div>
-          <div class="grid grid-cols-2 gap-4">
+          <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
             <img class="rounded-lg" src="content\671487aaea-ae2b0b9b0168527be442.png" />
             <img class="rounded-lg" src="content\f079c32a7c-9efa0b9d0ee0addeede7.png" />
           </div>
@@ -189,7 +191,7 @@
     <section class="py-24" id="projects">
       <div class="container mx-auto px-6 py-12 bg-gray-800 rounded-xl">
         <h2 class="text-3xl font-bold text-purple-400 mb-12">Featured Projects</h2>
-        <div class="columns-2 md:columns-4 gap-4 space-y-4">
+        <div class="columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4">
           <!-- Xylume TestNet -->
           <div
             class="relative group bg-gray-900 rounded-xl shadow-lg overflow-hidden p-4 flex flex-col justify-center flex-auto">
@@ -344,10 +346,10 @@
     <div class="container rounded-xl mx-auto px-6 py-24 bg-gray-800/50">
       <div class="flex items-center justify-center gap-6 rounded-xl">
         <!-- Video Section -->
-        <section class="p-6 bg-gray-900 rounded-xl shadow-lg" id="youtube">
+        <section class="p-6 bg-gray-900 rounded-xl shadow-lg max-w-[95vw] max-h-[90vh]" id="youtube">
           <h2 class="text-center text-3xl font-bold text-purple-400 mb-6">Latest Content</h2>
-          <div class="relative rounded-xl overflow-hidden overflow-hidden flex justify-center">
-            <div class="video-container" id="random-video"></div>
+          <div class="relative rounded-xl overflow-x-hidden flex justify-center">
+            <div class="video-container" class="bg-black w-[95%] h-[95%]" id="random-video"></div>
           </div>
           <p class="text-center mt-4 text-gray-300">Here's some of my content: AMVs, Music Videos, edits, or random
             chaos.</p>
@@ -357,12 +359,12 @@
     <section class="py-24" id="skills">
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-purple-400 mb-12">Skills & Tech Stack</h2>
-        <div class="grid md:grid-cols-2 gap-12">
+        <div class="grid lg:grid-cols-2 gap-12">
           <!-- Top Skills -->
           <div class="space-y-6">
             <!-- Python -->
             <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center justify-between mb-4">
+              <div class="flex flex-col md:flex-row items-center justify-between mb-4">
                 <span class="flex items-center"> <i class="fa-brands fa-python text-2xl mr-3"></i> Python </span>
                 <span class="text-purple-400"> because who needs sleep? </span>
               </div>
@@ -372,7 +374,7 @@
             </div>
             <!-- Lua -->
             <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center justify-between mb-4">
+              <div class="flex flex-col md:flex-row items-center justify-between mb-4">
                 <span class="flex items-center"> <i class="fa-solid fa-gamepad text-2xl mr-3"></i> Lua </span>
                 <span class="text-purple-400"> pretty cool for games? </span>
               </div>
@@ -382,7 +384,7 @@
             </div>
             <!-- Blender -->
             <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center justify-between mb-4">
+              <div class="flex flex-col md:flex-row items-center justify-between mb-4">
                 <span class="flex items-center"> <i class="fa-solid fa-cubes text-2xl mr-3"></i> Blender3D </span>
                 <span class="text-purple-400"> imagine hating cyberpunkish car renders with heavy rain </span>
               </div>
@@ -392,7 +394,7 @@
             </div>
             <!-- Web Dev -->
             <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center justify-between mb-4">
+              <div class="flex flex-col md:flex-row items-center justify-between mb-4">
                 <span class="flex items-center"> <i class="fa-solid fa-code text-2xl mr-3"></i> HTML + JS + CSS +
                   Tailwind + Flask </span>
                 <span class="text-purple-400"> does one even need more than this? </span>
@@ -403,7 +405,7 @@
             </div>
             <!-- Roblox Studio -->
             <div class="bg-gray-800 p-6 rounded-xl">
-              <div class="flex items-center justify-between mb-4">
+              <div class="flex flex-col md:flex-row items-center justify-between mb-4">
                 <span class="flex items-center"> <i class="fa-solid fa-rocket text-2xl mr-3"></i> Roblox Studio </span>
                 <span class="text-purple-400"> platform is never the bottleneck (im too dumb to use ue4) </span>
               </div>
@@ -413,7 +415,7 @@
             </div>
           </div>
           <!-- Minor Skills -->
-          <div class="grid grid-cols-3 gap-4">
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
             <!-- Low Level -->
             <div class="bg-gray-800 p-4 rounded-xl flex flex-col items-center justify-center relative group">
               <i class="fa-solid fa-bolt text-3xl mb-2 text-yellow-300"></i>
@@ -538,6 +540,7 @@
   </div>
   <script src="SmoothScroll.js"></script>
   <script>
+    let isTransitioning = false;
     function vh(percent) {
       var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
       return (percent * h) / 100;
@@ -552,7 +555,18 @@
     const headerheight = header.offsetHeight;
     document.body.removeChild(clonedElement);
     header.style.height = `${headerheight}px`;
+    function debounce(func, delay = 100) {
+      let timeout;
+      return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), delay);
+      };
+    }
+
     async function mobileMenuHandler() {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
       if (mobileMenu.classList.contains("hidden")) {
         header.style.height = `${headerheight + menuheight + vh(2)}px`;
         await new Promise((r) => setTimeout(r, 500));
@@ -562,10 +576,14 @@
         await new Promise((r) => setTimeout(r, 500));
         header.style.height = `${headerheight}px`;
       }
+
+      isTransitioning = false;
     }
     hamburgerButton.addEventListener("click", mobileMenuHandler);
-    hamburgerButton.addEventListener("mouseover", mobileMenuHandler);
-    hamburgerButton.addEventListener("mouseout", mobileMenuHandler);
+    hamburgerButton.addEventListener("pointerenter", e => e.pointerType === "mouse" && mobileMenuHandler());
+
+
+
 
     fetch("posts.html")
       .then((response) => response.text())
@@ -588,7 +606,7 @@
         const randomVideo = videos[Math.floor(Math.random() * videos.length)];
         const videoId = randomVideo.id.videoId;
         const embedUrl = `https://www.youtube.com/embed/${videoId}`;
-        document.getElementById("random-video").innerHTML = `<iframe width="560" height="315" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
+        document.getElementById("random-video").innerHTML = `<iframe width="100%" height="100%" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
       })
       .catch((error) => console.error("Error fetching videos:", error));
   </script>
