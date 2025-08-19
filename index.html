@@ -68,6 +68,11 @@
       transition: height 0.5s;
     }
 
+    * {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+
     #mobile-menu {
       display: hidden;
       animation: fadeIn 0.5s ease-out forwards;
@@ -181,7 +186,7 @@
             </div>
             <p class="text-gray-400 italic">"A jerk of all trades, a jack of some."</p>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 mx-auto">
             <img class="rounded-lg" src="content\671487aaea-ae2b0b9b0168527be442.png" />
             <img class="rounded-lg" src="content\f079c32a7c-9efa0b9d0ee0addeede7.png" />
           </div>
@@ -415,7 +420,7 @@
             </div>
           </div>
           <!-- Minor Skills -->
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             <!-- Low Level -->
             <div class="bg-gray-800 p-4 rounded-xl flex flex-col items-center justify-center relative group">
               <i class="fa-solid fa-bolt text-3xl mb-2 text-yellow-300"></i>
@@ -499,7 +504,7 @@
       <div class="container mx-auto px-6">
         <h2 class="text-3xl font-bold text-purple-400 mb-12">Posts and Updates</h2>
         <iframe id="postFrame" style="width: 100%; height: 50vh;"></iframe>
-        <br />
+        <br>
         <a href="posts.html" class="text-indigo-400">View more...</a>
       </div>
     </section>
@@ -508,23 +513,23 @@
         <h2 class="text-3xl font-bold text-purple-400 mb-6">Let's Connect!</h2>
         <p class="text-gray-300 mb-8">Catch me on Discord, Twitter, Instagram, YouTube, Reddit and wherenot!</p>
         <p class="text-gray-400 mb-8">I'll reply when I'm not knee-deep in code, promise.</p>
-        <div class="flex justify-center space-x-8 text-3xl">
-          <a class="text-gray-400 hover:text-purple-400 transition" href="https://discord.gg/csDr2zwyd9">
-            <i class="fa-brands fa-discord"></i>
-          </a>
-          <a class="text-gray-400 hover:text-purple-400 transition" href="https://x.com/debxylen">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-          <a class="text-gray-400 hover:text-purple-400 transition" href="https://youtube.com/@debxylen">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-          <a class="text-gray-400 hover:text-purple-400 transition" href="https://instagram.com/debxylen">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a class="text-gray-400 hover:text-purple-400 transition" href="https://www.reddit.com/user/PriyanshuDeb">
-            <i class="fa-brands fa-reddit"></i>
-          </a>
-        </div>
+<div class="grid grid-cols-2 sm:grid-cols-5 justify-center gap-8 text-3xl">
+  <a class="text-gray-400 hover:text-purple-400 transition" href="https://discord.gg/csDr2zwyd9">
+    <i class="fa-brands fa-discord"></i>
+  </a>
+  <a class="text-gray-400 hover:text-purple-400 transition" href="https://x.com/debxylen">
+    <i class="fa-brands fa-x-twitter"></i>
+  </a>
+  <a class="text-gray-400 hover:text-purple-400 transition" href="https://youtube.com/@debxylen">
+    <i class="fa-brands fa-youtube"></i>
+  </a>
+  <a class="text-gray-400 hover:text-purple-400 transition" href="https://instagram.com/debxylen">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a class="text-gray-400 hover:text-purple-400 transition" href="https://www.reddit.com/user/PriyanshuDeb">
+    <i class="fa-brands fa-reddit"></i>
+  </a>
+</div>
       </div>
     </section>
     <footer class="py-8 border-t border-gray-800" id="footer">
